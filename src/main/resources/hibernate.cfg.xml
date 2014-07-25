@@ -26,9 +26,11 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
 
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="com.mycompany.myjfx.model.Employee"/>
+        <mapping class="com.mycompany.myjfx.model.People"/>
+        <mapping class="com.mycompany.myjfx.model.Task"/>
+        <mapping class="com.mycompany.myjfx.model.LogEntry"/>
 
 
     </session-factory>

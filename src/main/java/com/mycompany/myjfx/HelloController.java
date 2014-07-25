@@ -1,13 +1,15 @@
 package com.mycompany.myjfx;
 
-import com.mycompany.myjfx.dao.EmployeeDAO;
-import com.mycompany.myjfx.model.Employee;
+import com.mycompany.myjfx.dao.PeopleDAOImpl;
+import com.mycompany.myjfx.model.People;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class HelloController
 {
@@ -24,11 +26,13 @@ public class HelloController
 
     public void sayHello() {
 
-        EmployeeDAO dao = new EmployeeDAO();
-        dao.create(new Employee("Vasa", "Dima", null, "0000"));
-
         String firstName = firstNameField.getText();
         String lastName = lastNameField.getText();
+
+        PeopleDAOImpl<People> dao = new PeopleDAOImpl<People>();
+        dao.create(new People(firstName, lastName));
+        List<People> peoples = dao.list();
+        log.debug(Integer.toString(peoples.size()));
 
         StringBuilder builder = new StringBuilder();
 

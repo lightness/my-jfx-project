@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
@@ -9,12 +9,11 @@
     <artifactId>my-jfx-project</artifactId>
     <name>my-jfx-project</name>
 
-    <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
-    
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
     <organization>
-        <!-- Used as the 'Vendor' for JNLP generation -->
-        <name>Your Organisation</name>
+        <name>My Company</name>
     </organization>
 
     <properties>
@@ -45,7 +44,7 @@
                     <keyStoreAlias>example-user</keyStoreAlias>
                     <keyStorePassword>example-password</keyStorePassword>
                     <!--<permissions>-->
-                        <!--<permission>all-permissions</permission>-->
+                    <!--<permission>all-permissions</permission>-->
                     <!--</permissions>-->
 
                 </configuration>
@@ -53,7 +52,6 @@
 
         </plugins>
     </build>
-
 
     <dependencies>
 
@@ -117,8 +115,8 @@
 
     <repositories>
         <!--<repository>-->
-            <!--<id>JBoss Deprecated</id>-->
-            <!--<url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>-->
+        <!--<id>JBoss Deprecated</id>-->
+        <!--<url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>-->
         <!--</repository>-->
         <repository>
             <id>java.net</id>

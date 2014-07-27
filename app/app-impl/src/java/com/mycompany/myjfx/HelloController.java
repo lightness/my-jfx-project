@@ -34,6 +34,8 @@ public class HelloController
         peopleService.create(new People(firstName, lastName));
         List<People> peoples = peopleService.findAll();
         log.debug(Integer.toString(peoples.size()));
+        People people = peopleService.findById(100L);
+        System.out.println(">1>> " + people.toString());
 // ****
         StringBuilder builder = new StringBuilder();
 

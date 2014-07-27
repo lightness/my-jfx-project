@@ -8,6 +8,9 @@
     <groupId>com.mycompany</groupId>
     <artifactId>my-jfx-project</artifactId>
     <name>my-jfx-project</name>
+    <modules>
+        <module>app</module>
+    </modules>
 
     <packaging>pom</packaging>
     <version>1.0.0</version>
@@ -43,9 +46,9 @@
                     <!-- only required if signing the jar file -->
                     <keyStoreAlias>example-user</keyStoreAlias>
                     <keyStorePassword>example-password</keyStorePassword>
-                    <!--<permissions>-->
-                    <!--<permission>all-permissions</permission>-->
-                    <!--</permissions>-->
+                    <permissions>
+                        <permission>all-permissions</permission>
+                    </permissions>
 
                 </configuration>
             </plugin>

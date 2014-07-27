@@ -10,6 +10,65 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>app-impl</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.zenjava</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>1.5</version>
+        </dependency>
+
+
+        <!-- MigLayout -->
+
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-javafx</artifactId>
+            <version>4.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mycompany</groupId>
+            <artifactId>app-api</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>1.5</version>
+                <configuration>
+                    <mainClass>com.mycompany.myjfx.MainApp</mainClass>
+
+                    <!-- only required if signing the jar file -->
+                    <keyStoreAlias>example-user</keyStoreAlias>
+                    <keyStorePassword>example-password</keyStorePassword>
+                    <permissions>
+                        <permission>all-permissions</permission>
+                    </permissions>
+
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <repositories>
+
+        <repository>
+            <id>java.net</id>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
+
+    </repositories>
 
 
 </project>

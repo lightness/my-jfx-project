@@ -26,6 +26,23 @@
     <build>
         <plugins>
 
+            <!--<plugin>-->
+                <!--<groupId>com.zenjava</groupId>-->
+                <!--<artifactId>javafx-maven-plugin</artifactId>-->
+                <!--<version>1.5</version>-->
+                <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<mainClass>com.mycompany.myjfx.MainApp</mainClass>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;&lt;!&ndash; only required if signing the jar file &ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;<keyStoreAlias>example-user</keyStoreAlias>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<keyStorePassword>example-password</keyStorePassword>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<permissions>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<permission>all-permissions</permission>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</permissions>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
+            <!--</plugin>-->
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -33,23 +50,6 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>1.5</version>
-                <configuration>
-                    <mainClass>com.mycompany.myjfx.MainApp</mainClass>
-
-                    <!-- only required if signing the jar file -->
-                    <keyStoreAlias>example-user</keyStoreAlias>
-                    <keyStorePassword>example-password</keyStorePassword>
-                    <permissions>
-                        <permission>all-permissions</permission>
-                    </permissions>
-
                 </configuration>
             </plugin>
 
@@ -75,13 +75,7 @@
             <version>5.1.10</version>
         </dependency>
 
-        <!-- MigLayout -->
 
-        <dependency>
-            <groupId>com.miglayout</groupId>
-            <artifactId>miglayout-javafx</artifactId>
-            <version>4.2</version>
-        </dependency>
 
         <!-- Apache Commons -->
 
@@ -116,15 +110,6 @@
 
     </dependencies>
 
-    <repositories>
-        <!--<repository>-->
-        <!--<id>JBoss Deprecated</id>-->
-        <!--<url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>-->
-        <!--</repository>-->
-        <repository>
-            <id>java.net</id>
-            <url>http://download.java.net/maven/2/</url>
-        </repository>
-    </repositories>
+
 
 </project>
